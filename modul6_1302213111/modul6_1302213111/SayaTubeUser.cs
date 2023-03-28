@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Diagnostics.Contracts;
 
 public class SayaTubeUser
 {
@@ -9,6 +10,9 @@ public class SayaTubeUser
 
     public SayaTubeUser(string username)
 	{
+        Contract.Requires(username.Length <= 100);
+        Contract.Requires(username != null);
+        Contract.Requires(uploadedVideos!= null);
         Random rnd = new Random();
         this.id = rnd.Next(10000, 99999);
         this.username = username;
@@ -36,9 +40,9 @@ public class SayaTubeUser
     {
         Console.WriteLine("User: " + this.username);
         int i;
-        for (i = 0; i < GetTotalVideoPlayCount(); i++)
+        for (i = 0; i < 8; i++)
         {
-            Console.WriteLine("Video " + (i+1) + " judul: " + uploadedVideos[i] + " count " + uploadedVideos[i].GetPlayCount());
+            Console.WriteLine("Video " + (i+1) + " judul: " + uploadedVideos[i].title + " count " + uploadedVideos[i].GetPlayCount());
         }
     }
 }

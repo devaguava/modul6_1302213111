@@ -36,6 +36,31 @@ public class PRogram
         sayaTubeVideo10.IncreasePlayCount(10);
         sayaTubeVideo10.PrintVideoDetails();
 
+        Console.WriteLine();
+
+        SayaTubeUser sayaTubeUser1 = new SayaTubeUser("Deva Angela");
+        sayaTubeUser1.AddVideo(sayaTubeVideo1);
+
+        sayaTubeUser1.AddVideo(sayaTubeVideo2);
+
+        sayaTubeUser1.AddVideo(sayaTubeVideo3);
+
+        sayaTubeUser1.AddVideo(sayaTubeVideo4);
+
+        sayaTubeUser1.AddVideo(sayaTubeVideo5);
+
+        sayaTubeUser1.AddVideo(sayaTubeVideo6);
+
+        sayaTubeUser1.AddVideo(sayaTubeVideo7);
+
+        sayaTubeUser1.AddVideo(sayaTubeVideo8);
+
+        sayaTubeUser1.AddVideo(sayaTubeVideo9);
+
+        sayaTubeUser1.AddVideo(sayaTubeVideo10);
+
+        sayaTubeUser1.PrintAllVideoPlayCount();
+
 
     }
 }
